@@ -1,0 +1,38 @@
+{
+  "name": "professionalweb/integration-hub-ьфззук",
+  "description": "Subsystem for integration hub to map data",
+  "keywords": [
+    "laravel",
+    "proxy",
+    "integration",
+    "hub",
+    "mapper"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "classmap": [
+    ],
+    "psr-4": {
+      "professionalweb\\IntegrationHub\\Mapper\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "professionalweb\\IntegrationHub\\Mapper\\Providers\\MapperProvider"
+      ]
+    }
+  }
+}
