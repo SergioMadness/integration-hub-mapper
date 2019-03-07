@@ -63,7 +63,7 @@ class MapperService implements MapperSubsystem
                 throw new \Exception('Wrong map');
             }
             foreach ($values as $oldVal => $newVal) {
-                if (Arr::get($data, $field) === $oldVal) {
+                if (Arr::get($data, $field) == $oldVal) {
                     Arr::set($data, $field, $newVal);
                 }
             }
