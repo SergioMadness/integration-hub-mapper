@@ -3,7 +3,7 @@
 use professionalweb\IntegrationHub\Mapper\Interfaces\MapperSubsystem;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Events\EventToProcess;
 
-class NewRequestListener
+class NewEventListener
 {
     public function handle(EventToProcess $eventToProcess)
     {
