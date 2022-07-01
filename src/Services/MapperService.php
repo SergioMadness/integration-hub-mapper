@@ -17,7 +17,7 @@ class MapperService implements MapperSubsystem
     /**
      * @var ProcessOptions
      */
-    private $processOptions;
+    private ProcessOptions $processOptions;
 
     /**
      * Set options with values
