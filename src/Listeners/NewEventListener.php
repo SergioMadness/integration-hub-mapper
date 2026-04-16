@@ -1,4 +1,8 @@
-<?php namespace professionalweb\IntegrationHub\Mapper\Listeners;
+<?php
+
+declare(strict_types=1);
+
+namespace professionalweb\IntegrationHub\Mapper\Listeners;
 
 use professionalweb\IntegrationHub\Mapper\Interfaces\MapperSubsystem;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Events\EventToProcess;

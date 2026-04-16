@@ -1,4 +1,8 @@
-<?php namespace professionalweb\IntegrationHub\Mapper\Providers;
+<?php
+
+declare(strict_types=1);
+
+namespace professionalweb\IntegrationHub\Mapper\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use professionalweb\IntegrationHub\Mapper\Models\MapperOptions;

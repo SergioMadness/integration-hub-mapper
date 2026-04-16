@@ -1,4 +1,8 @@
-<?php namespace professionalweb\IntegrationHub\Mapper\Models;
+<?php
+
+declare(strict_types=1);
+
+namespace professionalweb\IntegrationHub\Mapper\Models;
 
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Models\SubsystemOptions;
 
