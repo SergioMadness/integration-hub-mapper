@@ -15,19 +15,13 @@ use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Models\Subsys
 
 /**
  * Service to translate values
- * @package professionalweb\IntegrationHub\Mapper\Services
  */
 class MapperService implements MapperSubsystem
 {
-    /**
-     * @var ProcessOptions
-     */
     private ProcessOptions $processOptions;
 
     /**
      * Get available options
-     *
-     * @return SubsystemOptions
      */
     public function getAvailableOptions(): SubsystemOptions
     {
@@ -37,9 +31,6 @@ class MapperService implements MapperSubsystem
     /**
      * Process event data
      *
-     * @param EventData $eventData
-     *
-     * @return EventData
      * @throws Exception
      */
     public function process(EventData $eventData): EventData
@@ -63,9 +54,6 @@ class MapperService implements MapperSubsystem
         return $eventData->setData($data);
     }
 
-    /**
-     * @return ProcessOptions
-     */
     public function getProcessOptions(): ProcessOptions
     {
         return $this->processOptions;
@@ -73,10 +61,6 @@ class MapperService implements MapperSubsystem
 
     /**
      * Set options with values
-     *
-     * @param ProcessOptions $options
-     *
-     * @return Subsystem
      */
     public function setProcessOptions(ProcessOptions $options): Subsystem
     {

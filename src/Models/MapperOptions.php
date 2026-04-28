@@ -8,15 +8,12 @@ use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Models\Subsys
 
 /**
  * Subsystem options
- * @package professionalweb\IntegrationHub\Mapper\Models
  */
 class MapperOptions implements SubsystemOptions
 {
 
     /**
      * Get available fields for mapping
-     *
-     * @return array
      */
     public function getAvailableFields(): array
     {
@@ -25,8 +22,6 @@ class MapperOptions implements SubsystemOptions
 
     /**
      * Get array fields, that subsystem generates
-     *
-     * @return array
      */
     public function getAvailableOutFields(): array
     {
@@ -35,8 +30,6 @@ class MapperOptions implements SubsystemOptions
 
     /**
      * Get service settings
-     *
-     * @return array
      */
     public function getOptions(): array
     {
