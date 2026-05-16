@@ -1,18 +1,19 @@
-<?php namespace professionalweb\IntegrationHub\Mapper\Models;
+<?php
+
+declare(strict_types=1);
+
+namespace professionalweb\IntegrationHub\Mapper\Models;
 
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Models\SubsystemOptions;
 
 /**
  * Subsystem options
- * @package professionalweb\IntegrationHub\Mapper\Models
  */
 class MapperOptions implements SubsystemOptions
 {
 
     /**
      * Get available fields for mapping
-     *
-     * @return array
      */
     public function getAvailableFields(): array
     {
@@ -21,8 +22,6 @@ class MapperOptions implements SubsystemOptions
 
     /**
      * Get array fields, that subsystem generates
-     *
-     * @return array
      */
     public function getAvailableOutFields(): array
     {
@@ -31,8 +30,6 @@ class MapperOptions implements SubsystemOptions
 
     /**
      * Get service settings
-     *
-     * @return array
      */
     public function getOptions(): array
     {

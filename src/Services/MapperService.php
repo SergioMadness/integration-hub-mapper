@@ -1,5 +1,10 @@
-<?php namespace professionalweb\IntegrationHub\Mapper\Services;
+<?php
 
+declare(strict_types=1);
+
+namespace professionalweb\IntegrationHub\Mapper\Services;
+
+use Exception;
 use Illuminate\Support\Arr;
 use professionalweb\IntegrationHub\Mapper\Models\MapperOptions;
 use professionalweb\IntegrationHub\Mapper\Interfaces\MapperSubsystem;
@@ -10,33 +15,13 @@ use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Models\Subsys
 
 /**
  * Service to translate values
- * @package professionalweb\IntegrationHub\Mapper\Services
  */
 class MapperService implements MapperSubsystem
 {
-    /**
-     * @var ProcessOptions
-     */
     private ProcessOptions $processOptions;
 
     /**
-     * Set options with values
-     *
-     * @param ProcessOptions $options
-     *
-     * @return Subsystem
-     */
-    public function setProcessOptions(ProcessOptions $options): Subsystem
-    {
-        $this->processOptions = $options;
-
-        return $this;
-    }
-
-    /**
      * Get available options
-     *
-     * @return SubsystemOptions
      */
     public function getAvailableOptions(): SubsystemOptions
     {
@@ -46,10 +31,7 @@ class MapperService implements MapperSubsystem
     /**
      * Process event data
      *
-     * @param EventData $eventData
-     *
-     * @return EventData
-     * @throws \Exception
+     * @throws Exception
      */
     public function process(EventData $eventData): EventData
     {
@@ -60,7 +42,7 @@ class MapperService implements MapperSubsystem
         $data = $eventData->getData();
         foreach ($map as $field => $values) {
             if (!is_array($values)) {
-                throw new \Exception('Wrong map');
+                throw new Exception('Wrong map');
             }
             foreach ($values as $oldVal => $newVal) {
                 if (Arr::get($data, $field) == $oldVal) {
@@ -72,11 +54,18 @@ class MapperService implements MapperSubsystem
         return $eventData->setData($data);
     }
 
-    /**
-     * @return ProcessOptions
-     */
     public function getProcessOptions(): ProcessOptions
     {
         return $this->processOptions;
+    }
+
+    /**
+     * Set options with values
+     */
+    public function setProcessOptions(ProcessOptions $options): Subsystem
+    {
+        $this->processOptions = $options;
+
+        return $this;
     }
 }
